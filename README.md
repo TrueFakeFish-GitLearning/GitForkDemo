@@ -20,3 +20,5 @@ Third rebase merge change.
 ## CI status check test.
 
 ## Required approval test.
+
+## Conversation resolution test.

@@ -8,3 +8,4 @@ This change was made on a feature branch in the forked repository.
 ## Squash Demo
 
 First change.
+Second change.

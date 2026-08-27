@@ -14,3 +14,4 @@ Third change.
 ## Rebase Merge Demo
 
 First rebase merge change.
+Second rebase merge change.

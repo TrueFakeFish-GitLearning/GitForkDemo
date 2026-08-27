@@ -10,3 +10,7 @@ This change was made on a feature branch in the forked repository.
 First change.
 Second change.
 Third change.
+
+## Rebase Merge Demo
+
+First rebase merge change.

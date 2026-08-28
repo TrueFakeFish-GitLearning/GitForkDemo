@@ -1,0 +1,29 @@
+name: Environment Demo
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  environment-demo:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: demo
+
+    steps:
+      - name: Show environment name
+        run: echo "Running in demo environment"
+
+      - name: Check environment secret
+        env:
+          DEMO_ENV_TOKEN: ${{ secrets.DEMO_ENV_TOKEN }}
+        run: |
+          if [ -z "$DEMO_ENV_TOKEN" ]; then
+            echo "DEMO_ENV_TOKEN is not available"
+            exit 1
+          fi
+
+          echo "DEMO_ENV_TOKEN is available"

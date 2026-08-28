@@ -9,6 +9,7 @@ on:
 jobs:
   test:
     strategy:
+      fail-fast: false
       matrix:
         python-version: ["3.11", "3.12", "3.13", "3.14"]
 
@@ -46,3 +47,11 @@ jobs:
 
       - name: Run Ruff
         run: ruff check .
+
+  test-summary:
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Confirm all matrix tests passed
+        run: echo "All Python matrix tests passed."
